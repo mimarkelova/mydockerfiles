@@ -22,7 +22,9 @@ RUN apt-get update  && apt-get install -y \
         liblapack-dev \
         libatlas-base-dev \
         libhdf5-dev \
-        libtbb-dev
+        libtbb-dev \
+	ca-certificates \
+        curl 
 
 RUN pip install numpy \
         && pip install scipy \
