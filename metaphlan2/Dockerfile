@@ -24,13 +24,15 @@ RUN apt-get update  && apt-get install -y \
         libhdf5-dev \
         libtbb-dev \
 	ca-certificates \
-        curl 
+        curl \
+	samtools=0.1.19-1
 
 RUN pip install numpy \
         && pip install scipy \
         && pip install h5py \
         && pip install biom-format \
-	&& pip install biopython
+	&& pip install biopython \
+	&& pip install msgpack-python
 
 # install bowtie2
 RUN wget https://sourceforge.mirrorservice.org/b/bo/bowtie-bio/bowtie2/2.2.9/bowtie2-2.2.9-source.zip \
