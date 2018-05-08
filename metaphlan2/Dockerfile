@@ -29,8 +29,8 @@ RUN apt-get update  && apt-get install -y \
 RUN pip install numpy \
         && pip install scipy \
         && pip install h5py \
-        && pip install biom-format
-
+        && pip install biom-format \
+	&& pip install biopython
 
 # install bowtie2
 RUN wget https://sourceforge.mirrorservice.org/b/bo/bowtie-bio/bowtie2/2.2.9/bowtie2-2.2.9-source.zip \
